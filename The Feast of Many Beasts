@@ -1,0 +1,8 @@
+<?php
+  function feast($beast, $dish){
+    if(substr($beast, -1, 1) == substr($dish, -1, 1)){
+      return true;
+    }
+      return false;
+  }
+?>

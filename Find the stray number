@@ -1,0 +1,17 @@
+<?php
+  function stray($arr)
+  {
+      $cnt = count($arr);
+      $temp = $arr[0];
+
+      for($i = 1; $i < $cnt; $i++){
+          if($temp == $arr[$i]){
+              $temp = $arr[$i];
+          }elseif($temp != $arr[$i] && $arr[$i] == $arr[$i+1]){
+              return $temp;
+          }else{
+            return $arr[$i];
+          }
+      }  
+  }
+?>

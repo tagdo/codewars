@@ -1,0 +1,7 @@
+<?php  
+  function replace(string $s): string {
+      $voc = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'];
+       $temp = str_replace ( $voc , '!', $s);
+       return $temp;
+  }
+?>

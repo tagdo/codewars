@@ -1,0 +1,36 @@
+<?php
+  function expressionMatter($a, $b, $c) {
+    $first = $a * ($b + $c);
+    $second = $a * $b * $c;
+    $third = $a + $b * $c;
+    $fourth = ($a + $b) * $c;
+    $fifth = $a + $b + $c;
+    $sixth = $a + ($b * $c);
+
+    if($first > $second){
+      $temp1 = $first;
+    }else{
+      $temp1 = $second;
+    }
+
+    if($third > $fourth){
+      $temp2 = $third;
+    }else{
+      $temp2 = $fourth;
+    }
+
+    if($fifth > $sixth){
+      $temp3 = $fifth;
+    }else{
+      $temp3 = $sixth;
+    }
+
+    if($temp1 > $temp2 || $temp1 > $temp3 ){
+      return $temp1;
+    }elseif($temp2 > $temp3 || $temp2 > $temp1){
+      return $temp2;
+    }else{
+      return $temp3;
+    }
+  }
+?>

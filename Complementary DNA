@@ -1,0 +1,21 @@
+<?php
+  function DNA_strand($dna) {
+    $str = '';
+    $temp = [];
+    $temp = str_split($dna);
+    $cnt = count($temp);
+
+    for($i = 0; $i < $cnt; $i++){
+      if($temp[$i] == 'A'){
+        $str = $str . 'T';
+      }elseif($temp[$i] == 'T'){
+        $str = $str . 'A';
+      }elseif($temp[$i] == 'C'){
+        $str = $str . 'G';
+      }elseif($temp[$i] == 'G'){
+        $str = $str . 'C';
+      }
+    }
+    return $str;
+  }
+?>

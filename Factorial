@@ -1,0 +1,13 @@
+<?php
+  function factorial(int $n): int {
+    $temp = 1;
+    if($n == 0){
+      return 1;
+    }else{
+      for($i = 1; $i <= $n; $i++){
+        $temp = $temp * $i;
+      }
+    }
+    return $temp;
+  }
+?>

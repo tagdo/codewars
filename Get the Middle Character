@@ -1,0 +1,15 @@
+<?php
+  function getMiddle($text) {
+    $cnt = strlen($text);
+    if($cnt % 2 == 0){
+        $pos = $cnt / 2;
+        $pos = $pos - 1;
+        return substr($text, $pos, 2);
+    }elseif($cnt % 2 != 0){
+        $pos = $cnt / 2;
+        $pos = ceil($pos);
+        $pos = $pos - 1;
+        return substr($text, $pos, 1);
+    }
+  }
+?>

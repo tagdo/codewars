@@ -1,0 +1,9 @@
+<?php
+  function reverseWords($str) {
+
+    $words = $str;
+    $words = explode(' ', $words);
+    $words = array_map('strrev', $words);
+    return implode(' ', $words);
+  }
+?>

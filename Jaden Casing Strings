@@ -1,0 +1,21 @@
+<?php
+
+  function toJadenCase($string) 
+  {
+     $arr = [];
+     $cnt = 0;
+     $temp = '';
+     $arr = explode(' ', $string);
+
+    foreach($arr as $str){
+      if($cnt == 0){
+        $temp = $temp .  ucfirst($str);
+        $cnt++;
+      }else{
+        $temp = $temp . ' ' . ucfirst($str);
+      }
+    }
+    return $temp;
+  }
+
+?>

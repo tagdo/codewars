@@ -1,0 +1,16 @@
+<?php
+  function mxdiflg($a1, $a2) {
+
+      $maxlen1 = max(array_map('strlen', $a1));
+      $maxlen2 = max(array_map('strlen', $a2));
+
+      $minlen1 = min(array_map('strlen', $a1));
+      $minlen2 = min(array_map('strlen', $a2));
+
+      if($maxlen1 >= $maxlen2){
+          return abs($maxlen1 - $minlen2);
+      }else{
+          return abs($maxlen2 - $minlen1);
+      }
+  }
+?>

@@ -1,0 +1,28 @@
+function toCamelCase($str){
+  
+    $chr = mb_substr ($str, 0, 1, "UTF-8");
+  
+    if(preg_match('(_)', $str) && ctype_upper($chr) == true) {
+      $str = str_replace("_", " ", $str);
+      $str = ucwords($str);
+      $str = str_replace(" ", "", $str);
+      return $str;
+    }elseif(preg_match('(-)', $str) && ctype_upper($chr) == true) {
+      $str = str_replace("-", " ", $str);
+      $str = ucwords($str);
+      $str = str_replace(" ", "", $str);
+      return $str;
+    }elseif(preg_match('(_)', $str)) {
+      $str = str_replace("_", " ", $str);
+      $str = ucwords($str);
+      $str = str_replace(" ", "", $str);
+      $str = lcfirst($str);
+      return $str;
+    }elseif(preg_match('(-)', $str)) {
+      $str = str_replace("-", " ", $str);
+      $str = ucwords($str);
+      $str = str_replace(" ", "", $str);
+      $str = lcfirst($str);
+      return $str;
+    }
+}

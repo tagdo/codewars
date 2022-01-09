@@ -1,0 +1,14 @@
+function matrix_addition(array $a, array $b): array {
+  if(sizeof($a) != sizeof($b)) {
+    return false;
+  }
+  $size = sizeof($a);
+  $arr = array(array());
+  
+  for($i = 0; $i < $size; $i++) {
+    for($j = 0; $j < $size; $j++) {
+      $arr[$i][$j] = $a[$i][$j] + $b[$i][$j];
+    }
+  }
+  return $arr;
+}
